@@ -36,6 +36,12 @@ public class TimeBar extends GameSprite {
 		_timer.schedule(new TickTockTask(), 0l, 1000);
 	}
 	
+	@Override
+	public void draw () {
+		_game.spriteBatch.draw(_bar, x, y, _timeWidth, height);
+	}
+	
+	
 	class TickTockTask extends TimerTask{
 		public void run(){
 			if(_game.gameData.gameMode == GameState.PLAY && visible){

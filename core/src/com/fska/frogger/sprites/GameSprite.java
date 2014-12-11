@@ -34,6 +34,7 @@ public class GameSprite {
 		this.y = y;
 		active = true;
 		visible = true;
+		setSkin(skinName);
 	}
 	
 	public void setSkin(String skinName, int skinIndex){
